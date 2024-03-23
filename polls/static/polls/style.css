@@ -1,0 +1,26 @@
+li a {
+    padding-bottom: 50px;
+    color: darkgreen;
+}
+
+h1 {
+    font-style: italic;
+    /* not optimal - want to underline */
+    border-bottom: 2px solid rebeccapurple;
+    display: inline-block;
+    /* better */
+    /* text-decoration: underline; */
+    margin-bottom: 5px;
+}
+
+body {
+    position: fixed;
+    /* top: -50%; */
+    top: 0;
+    /* left: -50%; */
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url("images/background.jpg");
+    /* background: white url("images/background.png") no-repeat; */
+}

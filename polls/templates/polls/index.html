@@ -1,0 +1,20 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'polls/style.css' %}">
+
+<form action="{% url 'polls:index' %}" method="get">
+
+    {% if latest_question_list %}
+        <h1> The latest questions in the list</h1>
+        <ul>
+        {% for question in latest_question_list %}
+            <!-- <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li> -->
+            <!-- better not hardcoded -> refer to the url name of the url definitions -> see urls.py  -->
+            <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No polls are available.</p>
+    {% endif %}
+
+</form>
